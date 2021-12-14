@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Backend.Api.Models;
 
 namespace Backend.Api.Services
 {
     public class EmployeeRepository : IEmployeeRepository
     {
-        private readonly List<Employee> _employees;
+        private readonly IEnumerable<Employee> _employees;
 
         public EmployeeRepository()
         {
@@ -18,9 +19,9 @@ namespace Backend.Api.Services
             };
         }
 
-        public IEnumerable<Employee> GetEmployees()
+        public Task<IEnumerable<Employee>> GetEmployees()
         {
-            return this._employees;
+            return Task.Run(() => this._employees);
         }
     }
 }
