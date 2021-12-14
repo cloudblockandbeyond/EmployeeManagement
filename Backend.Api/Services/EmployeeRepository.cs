@@ -13,9 +13,9 @@ namespace Backend.Api.Services
         {
             this._employees = new List<Employee>()
             {
-                new Employee() { Id = new Guid(), Name = "Pavan", Department = Dept.IT, Email = "pavan@employeemanagement.com" },
-                new Employee() { Id = new Guid(), Name = "Kumar", Department = Dept.Admin, Email = "kumar@employeemanagement.com" },
-                new Employee() { Id = new Guid(), Name = "Singh", Department = Dept.HR, Email = "singh@employeemanagement.com" }
+                new Employee() { Id = Guid.NewGuid(), Name = "Pavan", Department = Dept.IT, Email = "pavan@employeemanagement.com" },
+                new Employee() { Id = Guid.NewGuid(), Name = "Kumar", Department = Dept.Admin, Email = "kumar@employeemanagement.com" },
+                new Employee() { Id = Guid.NewGuid(), Name = "Singh", Department = Dept.HR, Email = "singh@employeemanagement.com" }
             };
         }
 
