@@ -1,0 +1,12 @@
+version: '3.6'
+
+services: 
+
+  backend.api: 
+    build: 
+      context: 'Backend.Api'
+      dockerfile: Dockerfile
+    image: 'cloudblockandbeyond/employee_management/image_backend_api:v1.0'
+    container_name: 'container_employee_management_backend_api_container'
+    ports:
+      - "5900:80/tcp"
